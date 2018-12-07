@@ -1,21 +1,18 @@
-/* <html>
-Rh3
-<head>
-    <style> */
+
         .dropbtn {
            display: none;
         }
 @media (max-width:400px){
     .dropbtn {
             display: inline;
-            float:right;
+            float: right;
             border-radius: 50px;
             color: aqua;
             padding-right: 30px;
             padding-top: 20px;
             font-size: 20px;
             border: none;
-}
+}}
         .dropdown {
             position: relative;
             display: inline-block;
@@ -51,21 +48,4 @@ Rh3
         .dropdown:hover .dropbtn {
             background-color: black;
         }
-    /* </style>
-
-<body>
-    <div class="dropdown">
-        <button class="dropbtn">☰</button>
-        <div class="dropdown-content">
-            <a>Products</a>
-            <a>Developers</a>
-            <a>Company</a>
-            <a>Pricing</a>
-            <a>Support</a>
-            <a>Sign-up</a>
-        </div>
-    </div>
-</body>
-</head>
-
-</html> */
+    
