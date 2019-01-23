@@ -1,35 +1,107 @@
 <html>
 
 <head>
-    <title>The Next Cart - The Next Generation e-commerce</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/signup.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
 </head>
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .card {
+        width: 400px;
+        background: linear-gradient(150deg, #05d5ff 70%, #a6ffcb 94%);
+        box-shadow: 0 13px 27px -5px rgba(50, 50 , 93, .25),0 8px 16px -8px rgba(0, 0, 0, .3);
+        padding: 10px 0px 30px 80px;
+    }
+    input{
+        width: 300px;
+        height: 25px;
+        padding-left: 5px;
+        outline:none;
+           }
+    p{
+        margin-bottom: 1px;
+        font-size: 15px;
+    }
+    .name input{
+        margin-top: 10px;
+    }
+    .prefer{
+        margin-top: 0px;
+        color: teal;
+    }
+    .columns{
+        margin:86px 50% 20px 32%; 
+    }
+    .margin{
+        margin-left: -138px;
+    }
+    select{
+        outline: none;
+}
+</style>
+<script>
+    function showpassword() {
+        var x = document.getElementById("myInput")
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password"
+        }
+    }
+
+</script>
 
 <body>
-    <h1><a href="/index.html">The Next Cart</a></h1>
-    <div class="box-direction">
-        <div class="left-box"><b>Sign-Up</b>
+    <div>
+        <div class="card columns">
+            <div class="name">
+                <p>Name</p>
+                <input type="text" placeholder="First Name" /><br>
+                <input type="text" placeholder="Last Name" />
+            </div>
+            <div class="uid">
+                <p>Choose your user id</p>
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com" />
+                <p class="prefer">I prefer to use my current email address</p>
+            </div>
+            <div class="password">
+                <p>Create a Password</p>
+                <input type="password" value="" id="myInput" placeholder="password" />
+                <input class="margin" type="checkbox" onclick="showpassword()"><strong class="margin">Show
+                    Password</strong>
+                <p>Confirm Your Password</p>
+                <input type="password" placeholder="password" />
+            </div>
             <div>
-                <input placeholder="Id" />
-                <input type="password" placeholder="Password" />
+                <p>Birthday</p>
+                <input type="date" placeholder="day" />
             </div>
-            <button type="button" class="blue">Sign-up</button>
-            <div class="link">
-                <p> <a href="#">Create An Account</a></p>
-                <p> <a href="#">Forget password</a></p>
+            <div>
+                <p>Gender</p>
+                <select>
+                    <option value="select">i am..</option>
+                    <option value="Male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
             </div>
-        </div>
-        <div class="back-image">
-            <span class="right-box"><b>Sign-in with Social network</b>
-                <button class="facebook">Log-in with Facebook</button>
-                <button class="twitter">Log-in With twitter</button>
-                <button class="google">Log-in with Google</button></span>
+            <div>
+                <p>current email address</p>
+                <input type="email" />
+            </div>
+            <div>
+                <p>Location</p>
+                <input type="text" />
+            </div>
         </div>
     </div>
 
+    </div>
 </body>
 
 </html>
