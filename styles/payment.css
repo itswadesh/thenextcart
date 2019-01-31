@@ -77,6 +77,9 @@ border-top: 20px solid #2196F3;
     transition: transform .2s;
     height: 50%;
     border-radius: 5px;
+    padding: 12% 25px;
+    text-align: left;
+    line-height: 20px;
 }
 .features .card:hover{
     transform: scale(1.1);
@@ -120,8 +123,9 @@ border-top: 20px solid #2196F3;
 }
 }
 svg{
-    margin-left: 80px;
+    margin-left: 90px;
     margin-bottom: 10px;
+    
 }
 .include p{
     color: #9a9898;

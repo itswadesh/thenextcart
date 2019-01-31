@@ -78,15 +78,14 @@ h5{
     justify-content: space-around;
 }
 .collect-input {
-    height: 48px;
+    height: 40px;
     background: #fff;
     box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    font-size: 16px;
     margin-top: 8px;
-    padding-left: 10px;
 }
 .collect-input input[type="email"]{
+    padding-left: 10px;
     border: none;
     outline: none;
     background: transparent;
@@ -94,8 +93,6 @@ h5{
 .submit-button{
     font-size: 15px;
     text-transform: uppercase;
-    outline: none;
-    height: 49px;
 }
 .btn-text{
     font-size: 20px;
@@ -143,6 +140,7 @@ h5{
 .btn-direction{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .card-direction{
     display:flex;
@@ -160,9 +158,9 @@ h5{
     font-size: 30px;
 }
 .heading2{
-   font-size: 16px;
-   padding: 40px 30px 0px 30px;
-   text-align: justify;
+    font-size: 16px;
+    padding: 40px 30px 0px 30px;
+    text-align: justify;
 }
 h3{
     font-size: larger;

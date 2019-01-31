@@ -165,7 +165,9 @@ h4 {
             flex-direction: column;
   }
   .footer {
-    display: felx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -175,10 +177,10 @@ h4 {
 }
 
 hr {
+  border: 1px solid #f1f1f1;
   margin-top: 50px;
-  -webkit-box-shadow: 1px 1px 1px 1px rgba(50, 50, 93, 0.25);
-          box-shadow: 1px 1px 1px 1px rgba(50, 50, 93, 0.25);
-  border: none;
+  -webkit-box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
 }
 
 .footer-description {
@@ -222,7 +224,7 @@ hr {
   width: 35px;
 }
 
-@media (max-width: 500px) and (min-width: 360px) {
+@media (max-width: 500px) and (min-width: 160px) {
   .footer-description li {
     padding-top: 7px;
   }
@@ -232,17 +234,21 @@ hr {
   .footer img {
     padding-top: 10px;
   }
+  .menu h1 {
+    font-size: 23px;
+  }
 }
 
 @media (max-width: 700px) and (min-width: 600px) {
   .mob-menu h2 {
-    padding-left: 200px;
+    padding-left: 220px;
+    padding-top: 13px;
   }
 }
 
-@media (max-width: 500px) and (min-width: 360px) {
+@media (max-width: 500px) and (min-width: 160px) {
   .mob-menu h2 {
-    padding: 17px 0px;
+    padding: 10px 0px;
   }
 }
 
@@ -250,11 +256,9 @@ hr {
   display: none;
 }
 
-@media (max-width: 700px) and (min-width: 360px) {
+@media (max-width: 700px) and (min-width: 160px) {
   .drop {
     background-color: transparent;
-    color: white;
-    font-size: 16px;
     border: none;
     cursor: pointer;
     outline: none;
@@ -267,28 +271,75 @@ hr {
   }
   .dropdown-content {
     display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
     z-index: 1;
   }
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 15px;
     text-decoration: none;
     display: block;
-  }
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
   }
   .dropdown:hover .dropdown-content {
     display: block;
   }
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+  }
+}
+
+.aerrow {
+  float: right;
+  padding-top: 20px;
+}
+
+.icon-direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon-direction:hover {
+  background: #eee;
+}
+
+.icon-direction svg {
+  display: none;
+}
+
+@media (max-width: 700px) and (min-width: 160px) {
+  .icon-direction svg {
+    display: block;
+    margin-left: 10px;
+    margin-top: 11px;
+  }
+  .pay-card {
+    height: 50px;
+    background: #e6e6ee;
+    color: #6772e5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pay-card img {
+    display: block;
+  }
+}
+
+.pay-card img {
+  display: none;
+}
+
+@media (max-width: 820px) and (min-width: 700px) {
+  .small-menu ul li {
+    padding-left: 15px;
   }
 }
 /*# sourceMappingURL=global.css.map */

@@ -1,107 +1,94 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
-</head>
-<style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
     body {
-        font-family: sans-serif;
-        margin: 0px;
-        padding: 0px;
-    }
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    .card {
-        width: 400px;
-        background: linear-gradient(150deg, #05d5ff 70%, #a6ffcb 94%);
-        box-shadow: 0 13px 27px -5px rgba(50, 50 , 93, .25),0 8px 16px -8px rgba(0, 0, 0, .3);
-        padding: 10px 0px 30px 80px;
-    }
-    input{
-        width: 300px;
-        height: 25px;
-        padding-left: 5px;
-        outline:none;
-           }
-    p{
-        margin-bottom: 1px;
-        font-size: 15px;
-    }
-    .name input{
-        margin-top: 10px;
-    }
-    .prefer{
-        margin-top: 0px;
-        color: teal;
-    }
-    .columns{
-        margin:86px 50% 20px 32%; 
-    }
-    .margin{
-        margin-left: -138px;
-    }
-    select{
-        outline: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  padding: 16px;
+  background-color: white;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: #fff;
+  border-radius: 4px;
+  border:1px solid #eee;
+  box-shadow:  0 13px 27px -25px rgba(50, 50 , 93, .25),0 8px 16px -8px rgba(0, 0, 0, .3);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11),0 1px 3px rgba(0, 0, 0, .08);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
 }
 </style>
-<script>
-    function showpassword() {
-        var x = document.getElementById("myInput")
-        if (x.type === "password") {
-            x.type = "text";
-        }
-        else {
-            x.type = "password"
-        }
-    }
-
-</script>
+</head>
 
 <body>
-    <div>
-        <div class="card columns">
-            <div class="name">
-                <p>Name</p>
-                <input type="text" placeholder="First Name" /><br>
-                <input type="text" placeholder="Last Name" />
-            </div>
-            <div class="uid">
-                <p>Choose your user id</p>
-                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com" />
-                <p class="prefer">I prefer to use my current email address</p>
-            </div>
-            <div class="password">
-                <p>Create a Password</p>
-                <input type="password" value="" id="myInput" placeholder="password" />
-                <input class="margin" type="checkbox" onclick="showpassword()"><strong class="margin">Show
-                    Password</strong>
-                <p>Confirm Your Password</p>
-                <input type="password" placeholder="password" />
-            </div>
-            <div>
-                <p>Birthday</p>
-                <input type="date" placeholder="day" />
-            </div>
-            <div>
-                <p>Gender</p>
-                <select>
-                    <option value="select">i am..</option>
-                    <option value="Male">Male</option>
-                    <option value="female">Female</option>
-                </select>
 
-            </div>
-            <div>
-                <p>current email address</p>
-                <input type="email" />
-            </div>
-            <div>
-                <p>Location</p>
-                <input type="text" />
-            </div>
-        </div>
+  <form action="/action_page.php">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <hr>
+      <form action="#" onsubmit="if(document.getElementById('agree').checked){return true;} else {alert('please indicate that you have read and agree to the terms and conditions and privacy policy'); return false;}">
+        <input type="checkbox" name="checkbox" value="check" id="agree" />I have read and agree to the terms
+        and condition and privacy policy.</form>
+
+      <button type="submit">Register</button>
     </div>
 
+    <div class="container signin">
+      <p>Already have an account? <a href="sign.html">Sign in</a>.</p>
     </div>
+  </form>
+
 </body>
 
 </html>
